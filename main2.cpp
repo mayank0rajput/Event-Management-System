@@ -42,9 +42,6 @@ public:
 
 class Esports : public Events
 { // inheritance
-protected:
-    
-
 public:
 
     friend istream &operator>>(istream &in, Esports &obj) // same as Events
@@ -91,9 +88,6 @@ public:
 class Standup : protected Events
 { // inheritance
 public:
-    
-    
-    friend void buyTicket();                               // friend function
     friend istream &operator>>(istream &in, Standup &obj){
         
 
