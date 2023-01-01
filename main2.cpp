@@ -9,7 +9,6 @@ class Events
 { // declaration & definition
 protected:
     string eventName, eventVenue, eventDate; // data members of Events
-    int eventFee;
 
 public:
     static int eventId;     // data
@@ -42,6 +41,8 @@ public:
 
 class Esports : public Events
 { // inheritance
+protected:
+    int eventFee;
 public:
 
     friend istream &operator>>(istream &in, Esports &obj) // same as Events
@@ -85,8 +86,10 @@ public:
     Esports() {}
 };
 
-class Standup : protected Events
+class Standup : public Events
 { // inheritance
+protected:
+    int eventFee;
 public:
     friend istream &operator>>(istream &in, Standup &obj){
         
